@@ -310,9 +310,9 @@ with gr.Blocks() as agent_debug:
         "shows exactly what the agent ran, so you can verify it never asserts an answer itself."
     )
     with gr.Row():
-        course_dd = gr.Dropdown(choices=list(_COURSE_CONCEPTS), value="GEOGRAPHY", label="Course")
+        course_dd = gr.Dropdown(choices=list(_COURSE_CONCEPTS), value="PYTHON", label="Course")
         concept_dd = gr.Dropdown(
-            choices=_COURSE_CONCEPTS["GEOGRAPHY"], value=_COURSE_CONCEPTS["GEOGRAPHY"][0], label="Concept"
+            choices=_COURSE_CONCEPTS["PYTHON"], value=_COURSE_CONCEPTS["PYTHON"][0], label="Concept"
         )
     run_btn = gr.Button("Generate item ▶", variant="primary")
     with gr.Row():
@@ -328,7 +328,7 @@ with gr.Blocks() as agent_debug:
 with gr.Blocks(title="PLM Factory") as demo:
     gr.Markdown("# 🧠 PLM Factory — Adaptive Perceptual Learning Drills")
     gr.Markdown(
-        "Train your intuition with timed drills across **Geography**, **Python**, and **Chess**. "
+        "Train your intuition with timed drills across **Python** and **Chess**. "
         "Categories retire as you master them (4 consecutive fast-and-correct answers)."
     )
     with gr.Tab("📚 Student Demo"):
