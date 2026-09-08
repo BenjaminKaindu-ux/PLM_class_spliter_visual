@@ -109,6 +109,50 @@ def _create_map_figure(map_data: dict):
         return fig
 
 
+def _download_image_from_url(url: str):
+    """Download an image from URL and return PIL Image."""
+    # Simple cache to avoid repeated downloads
+    if not hasattr(_download_image_from_url, "_cache"):
+        _download_image_from_url._cache = {}
+    
+    if url in _download_image_from_url._cache:
+        return _download_image_from_url._cache[url]
+    
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+    }
+    
+    for attempt in range(3):
+        try:
+            import requests
+            from PIL import Image
+            import io
+            
+            response = requests.get(url, timeout=10, stream=True, headers=headers)
+            response.raise_for_status()
+            
+            image = Image.open(io.BytesIO(response.content))
+            
+            # Resize if too large
+            if image.width > 800 or image.height > 800:
+                image.thumbnail((800, 800), Image.Resampling.LANCZOS)
+            
+            _download_image_from_url._cache[url] = image
+            return image
+        except Exception as e:
+            if attempt < 2:
+                import time
+                time.sleep(2 * (attempt + 1))
+            else:
+                # Fallback: create placeholder image
+                from PIL import Image, ImageDraw
+                image = Image.new('RGB', (400, 300), color='lightblue')
+                draw = ImageDraw.Draw(image)
+                draw.text((50, 100), "Image unavailable", fill='black')
+                draw.text((50, 120), "Check your connection", fill='gray')
+                return image
+
+
 def _create_chess_board_image(fen: str):
     """Create a chess board image from FEN notation."""
     try:
@@ -189,8 +233,12 @@ def next_trial(course: str, tracker: ArtsTracker | None):
     code = gr.Code(visible=False)
     plot = gr.Plot(visible=False)
     
-    if stimulus_type == "map" and "map_data" in stimulus:
-        # Geography - show map
+    if stimulus_type == "image" and "image_url" in stimulus:
+        # Geography - show image from URL
+        image = _download_image_from_url(stimulus["image_url"])
+        img = gr.Image(value=image, visible=True)
+    elif stimulus_type == "map" and "map_data" in stimulus:
+        # Geography - show map (legacy support)
         fig = _create_map_figure(stimulus["map_data"])
         plot = gr.Plot(value=fig, visible=True)
     elif stimulus_type == "code" and "content" in stimulus:
