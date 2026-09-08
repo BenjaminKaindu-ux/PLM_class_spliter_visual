@@ -53,7 +53,7 @@ _FEEDBACK = {
 _COUNTRIES = [
     {
         "name": "United States",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Statue_of_Liberty_7.jpg/960px-Statue_of_Liberty_7.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Statue_of_Liberty_7.jpg?width=600",
         "lat": 39.8283,
         "lon": -98.5795,
         "zoom": 3,
@@ -61,7 +61,7 @@ _COUNTRIES = [
     },
     {
         "name": "Brazil",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg/960px-Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg?width=600",
         "lat": -14.2350,
         "lon": -51.9253,
         "zoom": 3,
@@ -69,7 +69,7 @@ _COUNTRIES = [
     },
     {
         "name": "France",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/960px-Tour_Eiffel_Wikimedia_Commons.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Wikimedia_Commons.jpg?width=600",
         "lat": 46.2276,
         "lon": 2.2137,
         "zoom": 4,
@@ -77,7 +77,7 @@ _COUNTRIES = [
     },
     {
         "name": "Japan",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/080103_hakridge_fuji.jpg/960px-080103_hakridge_fuji.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/080103_hakridge_fuji.jpg?width=600",
         "lat": 36.2048,
         "lon": 138.2529,
         "zoom": 4,
@@ -85,7 +85,7 @@ _COUNTRIES = [
     },
     {
         "name": "Australia",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sydney_Opera_House_-_Dec_2008.jpg/960px-Sydney_Opera_House_-_Dec_2008.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Opera_House_-_Dec_2008.jpg?width=600",
         "lat": -25.2744,
         "lon": 133.7751,
         "zoom": 3,
@@ -93,7 +93,7 @@ _COUNTRIES = [
     },
     {
         "name": "India",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Taj_Mahal%2C_Agra%2C_India_edit3.jpg/960px-Taj_Mahal%2C_Agra%2C_India_edit3.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taj_Mahal%2C_Agra%2C_India_edit3.jpg?width=600",
         "lat": 20.5937,
         "lon": 78.9629,
         "zoom": 4,
@@ -101,7 +101,7 @@ _COUNTRIES = [
     },
     {
         "name": "Egypt",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/960px-Kheops-Pyramid.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kheops-Pyramid.jpg?width=600",
         "lat": 26.8206,
         "lon": 30.8025,
         "zoom": 4,
@@ -109,7 +109,7 @@ _COUNTRIES = [
     },
     {
         "name": "Italy",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Colosseo_2020.jpg/960px-Colosseo_2020.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colosseo_2020.jpg?width=600",
         "lat": 41.8719,
         "lon": 12.5674,
         "zoom": 4,
@@ -117,7 +117,7 @@ _COUNTRIES = [
     },
     {
         "name": "China",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/The_Great_Wall_of_China_at_Jinshanling-edit.jpg/960px-The_Great_Wall_of_China_at_Jinshanling-edit.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Great_Wall_of_China_at_Jinshanling-edit.jpg?width=600",
         "lat": 35.8617,
         "lon": 104.1954,
         "zoom": 3,
@@ -125,7 +125,7 @@ _COUNTRIES = [
     },
     {
         "name": "United Kingdom",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg/960px-Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Clock_Tower_-_Palace_of_Westminster%2C_London_-_May_2007.jpg?width=600",
         "lat": 55.3781,
         "lon": -3.4360,
         "zoom": 4,
@@ -133,7 +133,7 @@ _COUNTRIES = [
     },
     {
         "name": "Germany",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Berliner_Dom_am_Lustgarten.jpg/960px-Berliner_Dom_am_Lustgarten.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Berliner_Dom_am_Lustgarten.jpg?width=600",
         "lat": 51.1657,
         "lon": 10.4515,
         "zoom": 4,
@@ -141,7 +141,7 @@ _COUNTRIES = [
     },
     {
         "name": "Spain",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Sagrada_Familia_nave_roof_detail.jpg/960px-Sagrada_Familia_nave_roof_detail.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sagrada_Familia_nave_roof_detail.jpg?width=600",
         "lat": 40.4637,
         "lon": -3.7492,
         "zoom": 4,
@@ -149,7 +149,7 @@ _COUNTRIES = [
     },
     {
         "name": "Mexico",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Chichen_Itza_3.jpg/960px-Chichen_Itza_3.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chichen_Itza_3.jpg?width=600",
         "lat": 23.6345,
         "lon": -102.5528,
         "zoom": 4,
@@ -157,7 +157,7 @@ _COUNTRIES = [
     },
     {
         "name": "South Africa",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Taba_Ncha_2.jpg/960px-Taba_Ncha_2.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taba_Ncha_2.jpg?width=600",
         "lat": -30.5595,
         "lon": 22.9375,
         "zoom": 4,
@@ -165,7 +165,7 @@ _COUNTRIES = [
     },
     {
         "name": "Canada",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Parliament_Hill_-_grad2.jpg/960px-Parliament_Hill_-_grad2.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Parliament_Hill_-_grad2.jpg?width=600",
         "lat": 56.1304,
         "lon": -106.3468,
         "zoom": 3,
@@ -178,7 +178,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Grand Canyon",
         "location": "Arizona, USA",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg/960px-Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dawn_on_the_S_rim_of_the_Grand_Canyon_%288645178272%29.jpg?width=600",
         "lat": 36.1069,
         "lon": -112.1129,
         "country": "United States"
@@ -186,7 +186,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Great Barrier Reef",
         "location": "Queensland, Australia",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Great_Barrier_Reef_-_underwater_2.jpg/960px-Great_Barrier_Reef_-_underwater_2.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Great_Barrier_Reef_-_underwater_2.jpg?width=600",
         "lat": -18.2871,
         "lon": 147.6992,
         "country": "Australia"
@@ -194,7 +194,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Amazon Rainforest",
         "location": "South America",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Aerial_photo_of_the_Amazon_Rainforest.jpg/960px-Aerial_photo_of_the_Amazon_Rainforest.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photo_of_the_Amazon_Rainforest.jpg?width=600",
         "lat": -3.4653,
         "lon": -62.2159,
         "country": "Brazil"
@@ -202,7 +202,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Mount Everest",
         "location": "Nepal/China border",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/960px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg?width=600",
         "lat": 27.9881,
         "lon": 86.9250,
         "country": "Nepal"
@@ -210,7 +210,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Northern Lights",
         "location": "Arctic Circle",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Polarlicht_2.jpg/960px-Polarlicht_2.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Polarlicht_2.jpg?width=600",
         "lat": 69.6492,
         "lon": 18.9553,
         "country": "Norway"
@@ -218,7 +218,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Victoria Falls",
         "location": "Zambia/Zimbabwe border",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Victoriaf%C3%A4lle.jpg/960px-Victoriaf%C3%A4lle.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Victoriaf%C3%A4lle.jpg?width=600",
         "lat": -17.9243,
         "lon": 25.8572,
         "country": "Zambia"
@@ -226,7 +226,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Sahara Desert",
         "location": "North Africa",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Wide_views_of_the_Sahara.jpg/960px-Wide_views_of_the_Sahara.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wide_views_of_the_Sahara.jpg?width=600",
         "lat": 23.4162,
         "lon": 25.6628,
         "country": "Algeria"
@@ -234,7 +234,7 @@ _NATURAL_LANDMARKS = [
     {
         "name": "Fjords of Norway",
         "location": "Norway",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Geirangerfjord_and_Serpefossen.jpg/960px-Geirangerfjord_and_Serpefossen.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Geirangerfjord_and_Serpefossen.jpg?width=600",
         "lat": 62.1008,
         "lon": 7.0940,
         "country": "Norway"
@@ -245,49 +245,49 @@ _NATURAL_LANDMARKS = [
 _CULTURES = [
     {
         "name": "Japanese Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Kinkaku-ji_the_Golden_Pavilion_in_Kyoto_overlooking_the_lake_-_high_res.JPG/960px-Kinkaku-ji_the_Golden_Pavilion_in_Kyoto_overlooking_the_lake_-_high_res.JPG",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kinkaku-ji_the_Golden_Pavilion_in_Kyoto_overlooking_the_lake_-_high_res.JPG?width=600",
         "country": "Japan",
         "description": "Traditional Japanese architecture"
     },
     {
         "name": "Indian Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Classical_dancer_of_India.jpg/960px-Classical_dancer_of_India.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Classical_dancer_of_India.jpg?width=600",
         "country": "India",
         "description": "Classical Indian dancer"
     },
     {
         "name": "Brazilian Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Rio_Carnival_2014.jpg/960px-Rio_Carnival_2014.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rio_Carnival_2014.jpg?width=600",
         "country": "Brazil",
         "description": "Rio Carnival celebration"
     },
     {
         "name": "Egyptian Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/960px-Kheops-Pyramid.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kheops-Pyramid.jpg?width=600",
         "country": "Egypt",
         "description": "Ancient Egyptian pyramids"
     },
     {
         "name": "Italian Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Venezia_-_St._Mark%27s_Basilica.jpg/960px-Venezia_-_St._Mark%27s_Basilica.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venezia_-_St._Mark%27s_Basilica.jpg?width=600",
         "country": "Italy",
         "description": "Venice, Italy"
     },
     {
         "name": "Chinese Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Flickr_-_Nicholas_T_-_Chinese_New_Year_%281%29.jpg/960px-Flickr_-_Nicholas_T_-_Chinese_New_Year_%281%29.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_Nicholas_T_-_Chinese_New_Year_%281%29.jpg?width=600",
         "country": "China",
         "description": "Chinese New Year celebration"
     },
     {
         "name": "African Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Masai_warriors.jpg/960px-Masai_warriors.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masai_warriors.jpg?width=600",
         "country": "Kenya",
         "description": "Maasai warriors, Kenya"
     },
     {
         "name": "Mexican Culture",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Mexico_Day_of_the_Dead.jpg/960px-Mexico_Day_of_the_Dead.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mexico_Day_of_the_Dead.jpg?width=600",
         "country": "Mexico",
         "description": "Day of the Dead celebration"
     },
@@ -298,7 +298,7 @@ _CITIES = [
     {
         "name": "Paris",
         "country": "France",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Eiffel_Tower%2C_April_2016.jpg/960px-Eiffel_Tower%2C_April_2016.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower%2C_April_2016.jpg?width=600",
         "lat": 48.8566,
         "lon": 2.3522,
         "description": "Eiffel Tower, Paris"
@@ -306,7 +306,7 @@ _CITIES = [
     {
         "name": "New York City",
         "country": "United States",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/New_york_times_square-terabass.jpg/960px-New_york_times_square-terabass.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/New_york_times_square-terabass.jpg?width=600",
         "lat": 40.7128,
         "lon": -74.0060,
         "description": "Times Square, New York"
@@ -314,7 +314,7 @@ _CITIES = [
     {
         "name": "Tokyo",
         "country": "Japan",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Skyscrapers_of_Shinjuku_2009_January.jpg/960px-Skyscrapers_of_Shinjuku_2009_January.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Skyscrapers_of_Shinjuku_2009_January.jpg?width=600",
         "lat": 35.6762,
         "lon": 139.6503,
         "description": "Shinjuku, Tokyo"
@@ -322,7 +322,7 @@ _CITIES = [
     {
         "name": "London",
         "country": "United Kingdom",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Palace_of_Westminster%2C_London_-_Feb_2007.jpg/960px-Palace_of_Westminster%2C_London_-_Feb_2007.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Palace_of_Westminster%2C_London_-_Feb_2007.jpg?width=600",
         "lat": 51.5074,
         "lon": -0.1278,
         "description": "Palace of Westminster, London"
@@ -330,7 +330,7 @@ _CITIES = [
     {
         "name": "Sydney",
         "country": "Australia",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Sydney_Opera_House_-_Dec_2008.jpg/960px-Sydney_Opera_House_-_Dec_2008.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sydney_Opera_House_-_Dec_2008.jpg?width=600",
         "lat": -33.8688,
         "lon": 151.2093,
         "description": "Sydney Opera House"
@@ -338,7 +338,7 @@ _CITIES = [
     {
         "name": "Dubai",
         "country": "United Arab Emirates",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Dubai_Marina_Skyline.jpg/960px-Dubai_Marina_Skyline.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dubai_Marina_Skyline.jpg?width=600",
         "lat": 25.2048,
         "lon": 55.2708,
         "description": "Dubai Marina skyline"
@@ -346,7 +346,7 @@ _CITIES = [
     {
         "name": "Rio de Janeiro",
         "country": "Brazil",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg/960px-Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cristo_Redentor_-_Rio_de_Janeiro%2C_Brasil.jpg?width=600",
         "lat": -22.9068,
         "lon": -43.1729,
         "description": "Christ the Redeemer, Rio"
@@ -354,7 +354,7 @@ _CITIES = [
     {
         "name": "Cairo",
         "country": "Egypt",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Kheops-Pyramid.jpg/960px-Kheops-Pyramid.jpg",
+        "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kheops-Pyramid.jpg?width=600",
         "lat": 30.0444,
         "lon": 31.2357,
         "description": "Great Pyramids near Cairo"
