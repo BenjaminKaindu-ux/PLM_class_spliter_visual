@@ -22,7 +22,7 @@ import time
 import gradio as gr
 from smolagents import ActionStep
 
-from src.generators import geography, python, chess
+from src.generators import python, chess
 from src.plm_core.arts import ArtsTracker, CategoryState
 from src.plm_core.plm_agent import build_plm_agent
 
@@ -30,14 +30,6 @@ MAX_CHOICES = 5  # widest choice set across courses
 
 # Shared by both the student drill and the agent debug tab below.
 COURSES = {
-    "GEOGRAPHY": {
-        "make_item": geography.make_item,
-        "categories": lambda: geography.CATEGORIES,
-        "blurb": (
-            "**GeoSense** — answer geography questions, identify spatial patterns, "
-            "and recognize geographic features. Answer keys are dataset-verified."
-        ),
-    },
     "PYTHON": {
         "make_item": python.make_item,
         "categories": lambda: python.CATEGORIES,
@@ -60,53 +52,6 @@ COURSES = {
 def new_session(course: str) -> ArtsTracker:
     categories = COURSES[course]["categories"]()
     return ArtsTracker([CategoryState(name=n, rt_threshold_s=s["rt_threshold_s"]) for n, s in categories.items()])
-
-
-def _create_map_figure(map_data: dict):
-    """Create a Plotly map figure from map data."""
-    try:
-        import plotly.graph_objects as go
-        
-        fig = go.Figure()
-        
-        # Add a marker at the location
-        fig.add_trace(go.Scattermap(
-            lat=[map_data["marker_lat"]],
-            lon=[map_data["marker_lon"]],
-            mode='markers',
-            marker=go.scattermap.Marker(
-                size=14,
-                color='red',
-                symbol='star',
-            ),
-            text=[map_data["marker_name"]],
-            textposition="top center",
-            textfont=dict(size=12, color="black"),
-            name="Location",
-        ))
-        
-        fig.update_layout(
-            mapbox_style="open-street-map",
-            mapbox=dict(
-                center=dict(lat=map_data["center_lat"], lon=map_data["center_lon"]),
-                zoom=map_data.get("zoom", 3),
-            ),
-            margin=dict(l=0, r=0, t=30, b=0),
-            height=350,
-            showlegend=False,
-        )
-        
-        return fig
-    except Exception as e:
-        # Fallback: return empty figure
-        import plotly.graph_objects as go
-        fig = go.Figure()
-        fig.update_layout(
-            annotations=[dict(text=f"Map error: {str(e)}", showarrow=False, x=0.5, y=0.5)],
-            xaxis=dict(visible=False),
-            yaxis=dict(visible=False),
-        )
-        return fig
 
 
 def _download_image_from_url(url: str):
@@ -208,7 +153,6 @@ def next_trial(course: str, tracker: ArtsTracker | None):
             None,
             gr.Image(visible=False),
             gr.Code(visible=False),
-            gr.Plot(visible=False),
             done,
             *[gr.Button(visible=False)] * MAX_CHOICES,
             tracker.summary(),
@@ -231,32 +175,19 @@ def next_trial(course: str, tracker: ArtsTracker | None):
     # Default values
     img = gr.Image(visible=False)
     code = gr.Code(visible=False)
-    plot = gr.Plot(visible=False)
     
-    if stimulus_type == "image" and "image_url" in stimulus:
-        # Geography - show image from URL
-        image = _download_image_from_url(stimulus["image_url"])
-        img = gr.Image(value=image, visible=True)
-    elif stimulus_type == "map" and "map_data" in stimulus:
-        # Geography - show map (legacy support)
-        fig = _create_map_figure(stimulus["map_data"])
-        plot = gr.Plot(value=fig, visible=True)
-    elif stimulus_type == "code" and "content" in stimulus:
+    if stimulus_type == "code" and "content" in stimulus:
         # Python - show code with syntax highlighting
         code = gr.Code(value=stimulus["content"], language="python", visible=True)
     elif stimulus_type == "chess_board" and "fen" in stimulus:
         # Chess - show board image
         img = gr.Image(value=_create_chess_board_image(stimulus["fen"]), visible=True)
-    elif stimulus_type == "pil_image":
-        # Legacy PIL image support
-        img = gr.Image(value=stimulus.get("image"), visible=True)
     
     return (
         tracker,
         item,
         img,
         code,
-        plot,
         f"### {item['prompt']}",
         *buttons,
         tracker.summary(),
@@ -278,14 +209,14 @@ def answer(idx: int, course: str, tracker: ArtsTracker, item: dict, t0: float):
 
 
 def _switch_course(course: str):
-    tr, item, img_u, code_u, plot_u, prompt_u, *btns, stats_u, t0_u = next_trial(course, new_session(course))
-    return COURSES[course]["blurb"], tr, item, img_u, code_u, plot_u, prompt_u, *btns, stats_u, t0_u
+    tr, item, img_u, code_u, prompt_u, *btns, stats_u, t0_u = next_trial(course, new_session(course))
+    return COURSES[course]["blurb"], tr, item, img_u, code_u, prompt_u, *btns, stats_u, t0_u
 
 
 with gr.Blocks() as student_demo:
     gr.Markdown("## 📚 Student Drill — Choose your domain and start training!")
-    course_dd = gr.Dropdown(choices=list(COURSES), value="GEOGRAPHY", label="Course")
-    blurb_md = gr.Markdown(COURSES["GEOGRAPHY"]["blurb"])
+    course_dd = gr.Dropdown(choices=list(COURSES), value="PYTHON", label="Course")
+    blurb_md = gr.Markdown(COURSES["PYTHON"]["blurb"])
     gr.Markdown(
         "Categories retire after 4 consecutive fast-and-correct answers (ARTS adaptive "
         "sequencing — accuracy **and** response time; Kellman, Massey & Son 2010)."
@@ -297,7 +228,6 @@ with gr.Blocks() as student_demo:
             # Visual components for different stimulus types
             img = gr.Image(visible=False, show_label=False)
             code = gr.Code(visible=False, label="Python Code", language="python")
-            plot = gr.Plot(visible=False, label="Geography Map")
             
             prompt_md = gr.Markdown("Press **Next trial** to begin.")
             with gr.Row():
@@ -310,7 +240,7 @@ with gr.Blocks() as student_demo:
             gr.Markdown("### Session progress")
             stats = gr.Dataframe(interactive=False)
 
-    trial_outputs = [tracker_s, item_s, img, code, plot, prompt_md, *btns, stats, t0_s]
+    trial_outputs = [tracker_s, item_s, img, code, prompt_md, *btns, stats, t0_s]
 
     next_btn.click(next_trial, [course_dd, tracker_s], trial_outputs).then(lambda: "", None, feedback_md)
     reset_btn.click(lambda c: next_trial(c, new_session(c)), [course_dd], trial_outputs).then(lambda: "", None, feedback_md)
